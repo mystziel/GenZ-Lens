@@ -1,0 +1,271 @@
+/* 
+ * #e0ae2d -  yellow
+ * #ffffff - white
+ * #f4e8d5 - beige
+ * #1b1718 - dark gray
+*/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4e8d5;
+}
+
+/* SECTION */
+.section-white {
+    background-color: #ffffff;
+    padding: 10px 10px;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.section-beige {
+    background-color: #f4e8d5;
+    padding: 10px 10px 25px;
+}
+
+/* HERO */
+.latest-topic {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    margin: 10px;
+    position: relative;
+    background-color: #f4e8d5;
+}
+
+.carousel-inner {
+    background-color: #f4e8d5;
+}
+
+.carousel-item.position-relative img {
+    aspect-ratio: 16/9;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-caption-overlay h2 {
+    color: #e0ae2d;
+    margin-bottom: 5px;
+}
+
+.carousel-caption-overlay p {
+    color: #ffffff;
+    margin-top: auto;
+    overflow: hidden;
+}
+
+.tags {
+    padding: 5px 10px;
+    border-radius: 50px;
+    left: 0;
+    text-align: left;
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: bold;
+    white-space: nowrap;
+    opacity: 80%;
+}
+
+.lt { 
+    width: fit-content;
+    text-align: center;
+    color: #1b1718;
+    padding: 10px;
+    background: #e0ae2d;
+    font-size: 2vw;
+    font-weight: bold;
+    left: 10%;
+}
+
+/* FEATURED */
+.feature-header {
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    width: 100%;
+}
+
+.feature-header h2{
+    margin: 0;
+}
+
+.feature-header hr {
+    all: unset;
+    flex-grow: 1; 
+    height: 5px; 
+    background-color: #e0ae2d; 
+    border: none;
+}
+
+.topics {
+    padding: 20px;
+    padding-bottom: 0;
+}
+
+.featured-content {
+    margin-bottom: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem; 
+    font-weight: bold;
+    color: #e0ae2d !important; 
+    margin-bottom: 5px;
+}
+
+.card-text {
+    font-size: 1rem; 
+    color: #1b1718; 
+    margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 100px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    max-height: 200px; 
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.05); 
+}
+
+a {
+    text-decoration: none !important; 
+    color: inherit;
+}
+
+/* JOIN US */
+.discord {
+    background-image: linear-gradient(45deg, #7289D7, #98A9B3, #222629);
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discord-link {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.discord-link h6 {
+    text-shadow: 2px 2px 5px #e0ae2d;
+}
+
+.discord-link img {
+    width: 100px;
+}
+
+input[placeholder] {
+    font-style: italic;
+    color: gray;
+}
+
+form {
+    background: #ffffff;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    right: 0;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .discord-link {
+        flex-direction: row; 
+        gap: 10px;
+    }
+}
+
+/* Newsletter Section */
+.newsletter {
+    text-align: center;
+    padding: 20px;
+}
+
+.newsletter input {
+    padding: 10px;
+    width: 250px;
+    margin-right: 5px;
+}
+
+.newsletter button {
+    padding: 10px;
+    background-color: #b57716;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer Section */
+.footer-content {
+    float: top;
+    text-align: center;
+    background: #1b1718;
+    padding: 15px;
+    color: white;
+}
+.footer-content img{
+    height: clamp(40px, 5vw, 60px);
+    border-radius: 50%;
+    border: 2px solid #e0ae2d;
+}
+
+.footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-content ul li {
+    margin-right: 10px;
+}
+
+.footer-content ul li a {
+    color: white;
+    text-decoration: none;
+}

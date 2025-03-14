@@ -1,0 +1,87 @@
+nav {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4e8d5;
+    position: relative; /* Ensure absolute positioning of dropdown works */
+}
+
+/* Logo */
+.logo img {
+    height: clamp(40px, 5vw, 60px); 
+    width: auto;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    z-index: 1000;
+}
+
+.nav-links li {
+    margin: 0 16px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1b1718;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e0ae2d;
+    font-weight: 700;
+}
+
+/* Hide menu button on large screens */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    color: #1b1718;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+/* Responsive Menu (for screens <= 768px) */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Ensure the toggle button appears */
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        display: none; 
+        background-color: #e0ae2d;
+        flex-direction: column;
+        width: 100%;
+        position: fixed; /* Changed from absolute to fixed */
+        top: 60px;
+        right: 0;
+        left: 0; /* Ensure it spans the full width */
+        padding: 10px 0;
+        text-align: center;
+        transition: all 0.3s ease-in-out; /* Smooth dropdown effect */
+        z-index: 999;
+    }
+    
+    .nav-links a:hover {
+    color: #f4e8d5;
+    font-weight: 700;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show menu when toggled */
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+}

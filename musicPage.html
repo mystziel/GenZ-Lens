@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Music Trends</title>
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            background-color: #f4e8d9;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .content {
+            flex: 1;
+        }
+        .music-trends {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .music-card {
+            background: black;
+            color: white;
+            border-radius: 15px;
+            padding: 15px;
+            margin: 15px;
+            width: 350px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .music-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .music-card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background:#f4e8d9;
+            color: black;
+            padding: 20px;
+            border-radius: 15px;
+            width: 50%;
+            max-height: 80vh;
+            overflow-y: auto;
+            text-align: left;
+            position: relative;
+        }
+        .popup img {
+            width: 120px;
+            border-radius: 10px;
+            float: left;
+            margin-right: 15px;
+        }
+        .popup h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .popup p {
+            font-size: 16px;
+        }
+        .popup .artist-info {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .lyrics {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav role="navigation">
+        <a href="homePage.html" class="logo">
+            <img src="Images/Logo-Icons/GenZ%20Lens%20Logo.png" alt="GenZ Lens" width="100px">
+        </a>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="gamePage.html">Gaming</a></li>
+            <li><a href="musicPage.html">Music</a></li>
+            <li><a href="NewsandUpdates.html">News</a></li>
+            <li><a href="contactPage.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <h2>2024 Music Trends</h2>
+
+    <div class="content">
+        <section class="music-trends">
+            <div class="music-card" onclick="openPopup('Luther (with SZA)', 'luther.jpg', 'Kendrick Lamar | GNX | 2024')" id="Luther">
+                <img src="Images/luther.jpg" alt="Luther (with SZA)">
+                <p>Luther (with SZA)</p>
+                <button class="play-button">See Lyrics</button>
+            </div>
+            <div class="music-card" onclick="openPopup('BMF', 'bmf.jpg', 'SZA | SOS Deluxe: LANA | 2024')" id="BMF">
+                <img src="Images/bmf.jpg" alt="BMF">
+                <p>BMF</p>
+                <button class="play-button">See Lyrics</button>
+            </div>
+            <div class="music-card" onclick="openPopup('Like Him', 'likehim.jpg', 'Tyler, The Creator | CHROMAKOPIA | 2024')" id="LikeHim">
+                <img src="Images/likehim.jpg" alt="Like Him">
+                <p>Like Him (feat.Lola Young)</p>
+                <button class="play-button">See Lyrics</button>
+            </div>
+            <div class="music-card" onclick="openPopup('Push 2 Start', 'push2start.jpg', 'Tyla | TYLA | 2024')" id="Push2Start">
+                <img src="Images/push2start.jpg" alt="Push 2 Start">
+                <p>Push 2 Start</p>
+                <button class="play-button">See Lyrics</button>
+            </div>
+             <div class="music-card" onclick="openPopup('Taste', 'taste.jpg', 'Sabrina Carpenter | Short n\' Sweet | 2024')" id="Taste">
+                <img src="Images/taste.jpg" alt="taste">
+                <p>Taste</p>
+                <button class="play-button">See Lyrics</button>
+            </div>
+        </section>
+    </div>
+    
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <a href="#" class="close-btn" onclick="closePopup()">&times;</a>
+            <img id="popup-img" src=" " alt="Song Image">
+            <h2 id="popup-title"></h2>
+            <p class="artist-info" id="popup-artist"></p>
+            <div class="lyrics" id="popup-lyrics"></div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <section class="footer-section">
+        <footer class="footer-content">
+            <img src="Images/Logo-Icons/GenZ%20Lens%20Logo-whitebg.png" alt="GenZ Lens"><br>
+            <p>&copy; 2025 GENZ LENS</p>
+            <ul>
+                <li><a href="contactPage.html">Contact Us</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li> 
+            </ul>
+                <b>Developer: </b>Sofia Bianca Encisa
+        </footer>
+    </section>
+    
+    <script>
+        function openPopup(title, imgSrc, artistInfo) {
+            document.getElementById('popup-title').innerText = title;
+            document.getElementById('popup-img').src = "Images/" + imgSrc;
+            document.getElementById('popup-artist').innerText = artistInfo;
+            let lyrics = '';
+
+            if (title === 'Luther (with SZA)') {
+                lyrics = ` If this world were mine<br>
+            Hey, Roman numeral seven, bae, drop it like it's hot<br>
+            If this world was mine, I'd take your dreams and make 'em multiply<br>
+            If this world was mine, I'd take your enemies in front of God<br>
+            Introduce 'em to that light, hit them strictly with that fire<br>
+            Fah-fah, fah-fah-fah, fah-fah, fah<br>
+            Hey, Roman numeral seven, bae, drop it like it's hot<br>
+            If this world was mine, I'd take your dreams and make 'em multiply<br>
+            If this world was mine, I'd take your enemies in front of God<br>
+            Introduce 'em to that light, hit them strictly with that fire<br>
+            It's a vibe, do your dance, let 'em watch<br>
+            She a fan, he a flop, they just wanna kumbaya, nah<br>
+            In this world, concrete flowers grow<br>
+            Heartache, she only doin' what she know<br>
+            Weekends, get it poppin' on the low<br>
+            Better days comin' for sure (if this world were)<br><br>
+
+            If it was up to me<br>
+            I wouldn't give these nobodies no sympathy<br>
+            I'd take away the pain, I'd give you everything<br>
+            I just wanna see you win, wanna see (if this world were mine)<br>
+            It go in (when you), out (ride it), do it real slow (slide)<br>
+            Baby, you a star, strike, pose (right)<br>
+            When I'm (when you), with you (with me), everything goes (slow)<br>
+            Come and (put that), put that (on my), on my (titi), soul (soul)<br>
+            'Rari (red), crown (stack), wrist (stay), froze (really)<br>
+            Drip (tell me), pound (if you), on the way home (love me)<br>
+            In this world, concrete flowers grow<br>
+            Heartache, she only doin' what she know<br>
+            Weekends, get it poppin' on the low<br>
+            Better days comin' for sure (if this world were)<br><br>
+
+            If it was up to me<br>
+            I wouldn't give these nobodies no sympathy<br>
+            I'd take away the pain, I'd give you everything<br>
+            I just wanna see you win, wanna see (if this world were mine)<br>
+            I can't lie, I trust you, I love you, I won't waste your time<br>
+            I turn it off just so I can turn you on<br>
+            I'ma make you say it loud<br>
+            I'm not even trippin', I won't stress you out<br>
+            I might even settle down for you, I'ma show you I'm a pro<br>
+            I'ma take my time and turn it off<br>
+            Just so I can turn you on, baby<br>
+            Weekends, get it poppin' on the low<br>
+            Better days comin' for sure<br>
+            I know you'll come<br>
+            I know you're comin' for<br>
+            (Anything)<br>
+            (If this world were mine)
+        </p>`;
+            } else if (title === 'BMF') {
+                lyrics = `Young and fine and dark and handsome<br>
+            The boy from South Detroit keep bossing, and<br>
+            I can't keep my panties from dropping<br>
+            He's so fly, fly<br><br>
+
+            Going too fast, don't hurt yourself<br>
+            I can't keep up with all the lies you tell yourself<br>
+            You kinda cute, but play too much, don't play yourself<br>
+            I'm not the one, but we can still pretend this can be my man<br>
+            You say you feel different when you with me, tell me anything<br>
+            Compliment my energy, it's different laying next to me<br>
+            All I ask is don't make me pull up and get to dumping<br>
+            You know I can't give no fucks, you know I'm with all the ruckus, can you?<br><br>
+
+            Young and fine and dark and handsome<br>
+            The boy West side of Compton came walking in<br>
+            I can't keep my panties from dropping<br>
+            He's so fly, fly<br><br>
+
+            Ooh, he bossy, ooh, he Crip walkin'<br>
+            Took me to Slauson and he slut me out<br>
+            And when I got a problem, he get to packing<br>
+            He 'bout all that action, call him Mr. Handle It<br>
+            You know I'm hella different from them chickens you been trickin' on<br>
+            I can be your ride or die, get down your strongest bone<br>
+            Trust me, boy, I'm good in every hood<br>
+            Trickin', finna fall in backwards<br>
+            I'm just tryna show you what it would be like if you my man<br><br>
+
+            Young and fine and dark and handsome<br>
+            The boy from South of somewhere came walking in<br>
+            I can't keep my panties from dropping<br>
+            He's so fly, fly<br><br>
+
+            Blowin' money fast, it won't last<br>
+            Shorty won't make it last, ooh-oh<br>
+            Blowin' money fast, we might crash<br>
+            I'll make it last, we'll be-, oh-oh<br><br>
+
+            Ecstasy is just a pill away<br>
+            Pop it up or you could screw today<br>
+            I'm just tryna hear you say my name<br>
+            Love to play your ruler, be your Jane<br>
+            You could be my Tarzan, toss me up<br>
+            Other hoes is lacking, call me up<br>
+            Know my baby packing, why I'm stuck<br>
+            That's why he my man<br><br>
+
+            Young and he fine and he tall and he handsome<br>
+            Talkin' so fine, I might hold it for ransom<br>
+            Put it in drive, I'm not shy, I might let ya<br>
+            Cruise all night<br><br>
+
+            Blowin' money fast, it won't last<br>
+            Shorty won't make it last, ooh-oh<br>
+            Blowin' money fast, we might crash
+        </p>`;
+            } else if (title === 'Like Him') {
+                lyrics = `She said that I make expressions like him<br>
+            My legs to my shoulders and my chin like him<br>
+            My waist and my posture like him<br>
+            Mama, I'm chasing a ghost, I don't know who he is<br>
+            Mama, I'm chasing a ghost, I don't know where he is<br>
+            Mama, I'm chasing a ghost, do I look like him?<br><br>
+
+            You gave me love, and affection<br>
+            Attention, protection<br>
+            How could I ever miss something that I've never had?<br><br>
+
+            I would never judge you<br>
+            'Cause everything worked out without him<br>
+            Let it go, I've decided to<br>
+            Anything that lives inside of you<br>
+            I would never ever lie to you<br>
+            You ain't ever have to lie to me<br>
+            I'm everything that I've strived to be<br>
+            So do I look like him?<br>
+            Do I look like him?<br>
+            I don't look like him
+        </p>`;
+            } else if (title === 'Push 2 Start') {
+                lyrics = ` Ayy<br>
+            Ayy, yeah-yeah-yeah-yeah-yeah, yeah-yeah-yeah<br>
+            Oh<br><br>
+
+            The way we move, uh, skin on to skin<br>
+            No separation, need no competition, nah, nah, nah<br>
+            Ah, on everything<br>
+            It's automatic, goin' zero to a hund', nah, nah<br>
+            Ride it wishin' the wheels will fall off<br>
+            Time is tickin', it's takin' you too long<br>
+            Right before I decide to go home<br><br>
+
+            Act like you heard me<br>
+            Only serve it up if you deserve me, yeah<br>
+            Pull up and earn me (pusha, pusha)<br>
+            Push to start (pusha, pusha)<br>
+            Act like you heard me<br>
+            Only serve it up if you deserve me, yeah<br>
+            Pull up and earn me (pusha, pusha)<br>
+            Push to start (pusha, pusha)<br><br>
+
+            Mm, pushin' on my buttons with no hesitation ('tation)<br>
+            Gas me up, give me motivation (motivation)<br>
+            So tell me where we goin', pick a destination ('nation)<br>
+            Gas me up, give me motivation, oh (motivation)<br><br>
+
+            Pushin' on my buttons with no hesitation ('tation)<br>
+            Gas me up, give me motivation (motivation)<br>
+            So tell me where we goin', pick a destination ('nation)<br>
+            Gas me up, give me motivation, oh (nah)<br><br>
+
+            Come, give me life and I'll change yours<br>
+            Who needs signs? I say floor it<br>
+            On a high, when we lonely<br>
+            Hold me, love me, hold me<br><br>
+
+            Act like you heard me<br>
+            Only serve it up if you deserve me, yeah<br>
+            Pull up and earn me (pusha, pusha)<br>
+            Push to start (pusha, pusha)<br>
+            Act like you heard me<br>
+            Only serve it up if you deserve me, yeah<br>
+            Pull up and earn me (pusha, pusha)<br>
+            Push to start (pusha, pusha)<br><br>
+
+            Mm, pushin' on my buttons with no hesitation ('tation)<br>
+            Gas me up, give me motivation (motivation)<br>
+            So tell me where we goin', pick a destination ('nation)<br>
+            Gas me up, give me motivation, now (motivation)<br><br>
+
+            Pushin' on my buttons with no hesitation ('tation)<br>
+            Gas me up, give me motivation (motivation)<br>
+            So tell me where we goin', pick a destination ('nation)<br>
+            Gas me up, give me motivation, now (nah)<br><br>
+
+            Give me life, I'll change yours<br>
+            Who needs signs? I say floor it<br>
+            On a high, when we lonely<br>
+            Oh
+        </p>`;
+            } else if (title === 'Taste') {
+                lyrics = `Oh, I leave quite an impression<br>
+            Five feet to be exact<br>
+            You're wonderin' why half his clothes went missin'<br>
+            My body's where they're at<br>
+            Now I'm gone, but you're still layin'<br>
+            Next to me, one degree of separation<br>
+            I heard you're back together and if that's true<br>
+            You'll just have to taste me when he's kissin' you<br>
+            If you want forever, I bet you do<br>
+            Just know you'll taste me too<br>
+            Uh-huh<br><br>
+
+            He pins you down on the carpet<br>
+            Makes paintings with his tongue<br>
+            He's funny, now all his jokes hit different<br>
+            Guess who he learned that from?<br>
+            Now I'm gone, but you're still layin'<br>
+            Next to me, one degree of separation<br>
+            I heard you're back together and if that's true<br>
+            You'll just have to taste me when he's kissin' you<br>
+            If you want forever, I bet you do (I bet you do)<br>
+            Just know you'll taste me too<br><br>
+
+            Every time you close your eyes<br>
+            And feel his lips, you're feelin' mine<br>
+            And every time you breathe his air<br>
+            Just know I was already there<br><br>
+
+            You can have him if you like<br>
+            I've been there, done that, once or twice<br>
+            And singin' 'bout it don't mean I care<br>
+            Yeah, I know I've been known to share<br>
+            Well, I heard you're back together and if that's true<br>
+            You'll just have to taste me when he's kissin' you<br>
+            If you want forever, I bet you do (I bet you do)<br>
+            Just know you'll taste me too<br><br>
+
+            Taste me too (ow)<br>
+            You'll just have to taste me when he's kissin' you<br>
+            You, no, yeah, uh-uh<br>
+            You'll just have to taste me when he's kissin' you
+        </p>`;
+            }
+
+            document.getElementById('popup-lyrics').innerHTML = lyrics;
+            document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+    <script src="navScript.js"></script>
+</body>
+</html>

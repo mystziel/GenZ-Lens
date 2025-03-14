@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GenZ | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="Images/Logo-Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Images/Logo-Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Images/Logo-Icons/favicon-16x16.png">
+    <link rel="manifest" href="Images/Logo-Icons/site.webmanifest">
+    <link rel="stylesheet" href="homeStyle.css">
+    <link rel="stylesheet" href="nav.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+</head>
+    
+<body>
+    <nav role="navigation">
+        <a href="homePage.html" class="logo">
+            <img src="Images/Logo-Icons/GenZ%20Lens%20Logo.png" alt="GenZ Lens" width="100px">
+        </a>
+        <button class="menu-toggle">☰</button>
+        <ul class="nav-links">
+            <li><a href="homePage.html">Home</a></li>
+            <li><a href="gamePage.html">Gaming</a></li>
+            <li><a href="musicPage.html">Music</a></li>
+            <li><a href="NewsandUpdates.html">News</a></li>
+            <li><a href="contactPage.html">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!--Carousel-->
+    <section class="section-beige" id="Hero">
+        <h1 class="lt">LATEST TOPICS</h1>
+        <div id="demo" class="carousel slide" data-bs-ride="carousel" >
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner" style="background-color: #f4e8d5">
+                <div class="carousel-item active position-relative">
+                    <a href="gamePage.html#AstroBot">
+                        <img src="Images/astroBot.webp" alt="Astro Bot" class="d-block w-100">
+                        <div class="carousel-caption-overlay">
+                            <h2>ASTRO BOT</h2>
+                            <b class="tags">Game</b>
+                            <p>Astro Bot is a 2024 platform game developed by Team Asobi and published by Sony Interactive Entertainment for the PlayStation 5 to coincide with PlayStation's 30th anniversary.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item position-relative">
+                    <a href="musicPage.html#luther">
+                        <img src="Images/luther.jpg" alt="Like Him" class="d-block w-100">
+                        <div class="carousel-caption-overlay">
+                            <h2>Luther (with SZA)</h2>
+                            <b class="tags">Music</b>
+                            <p>Lyrics are now available!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="carousel-item position-relative">
+                    <a href="NewsandUpdates.html#GTAVI">
+                        <img src="https://tech4gamers.com/wp-content/uploads/2023/12/GTA-6-RT.jpg'" alt="GTA VI" class="d-block w-100">
+                        <div class="carousel-caption-overlay">
+                            <h2>Grand Theft Auto VI</h2>
+                            <b class="tags">Music | News & Updates</b>
+                            <p>GTA 6 is officially set for release in 2025! Set in Vice City, it promises an expansive open-world experience, a gripping storyline, and groundbreaking features that push the boundaries of the franchise.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="section-white featured-section">
+        <div class="feature-header" style="margin-bottom: -10px;">
+            <h2>Featured</h2>
+            <hr>
+        </div> 
+        <div class="topics" id="feature">
+            <div class="featured-content">
+                <div class="feature-header" id="game">
+                    <a href="gamePage.html" style="color: black"><h3>Game Time!</h3></a>
+                    <hr>
+                </div>
+                <div class="container">
+                    <div class="row g-2">
+                        <div class="col-12 col-md-6 col-lg-4 cards">
+                            <a href="gamePage.html#SilentHill2">
+                                <img src="Images/silentHill.jpg" alt="Top 3: Silent Hill 2" class="card-img-top" >
+                                <div class="card-body">
+                                    <h5 class="card-title">Top 3: Silent Hill 2 REMAKE</h5>
+                                    <p class="card-text">Silent Hill 2 is a 2024 survival horror game developed by Bloober Team and published by Konami Digital Entertainment. It is a remake of the 2001 video game Silent Hill 2, originally developed by Team Silent, a group within Konami Computer Entertainment Tokyo.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 cards">
+                            <a href="gamePage.html#WarHammer">
+                                <img src="Images/warHammer.jpg" alt="Top 4: WARHAMMER" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Top 4: WARHAMMER 40,000: Space Marine</h5>
+                                    <p class="card-text">Warhammer 40,000: Space Marine is a third-person shooter hack-n-slash video game developed by Relic Entertainment and published by THQ. The game was released for PlayStation 3, Windows, and Xbox 360 in North America, Australia, and Europe in September 2011.</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4 cards">
+                            <a href="gamePage.html#EldenRing">
+                                <img src="Images/eldenRing.webp" alt="Top 3: ELDEN RING" class="card-img-top">
+                                <div class="card-body">
+                                    <h5 class="card-title">Top 3: ELDEN RING: SHADOW OF THE ERDTREE</h5>
+                                    <p class="card-text">Elden Ring is a 2022 action role-playing game developed by FromSoftware. It was directed by Hidetaka Miyazaki with worldbuilding provided by American fantasy writer George R. R. Martin.</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            <div class="featured-content">
+                <div class="featured-content">
+                    <div class="feature-header" id="music">
+                        <a href="musicPage.html" style="color: black"><h3>Peace Time with Music</h3></a>
+                        <hr>
+                    </div>
+                    <div class="container">
+                        <div class="row g-2">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="musicPage.html#LikeHim">
+                                    <img src="Images/likehim.jpg" alt="Like Him" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Like Him (feat.Lola Young)</h5>
+                                        <p class="card-text">Ayy<br>
+                                            She said that I make expressions like him<br>
+                                            My legs to my shoulders and my chin like him<br>
+                                            My waist and my posture like him<br>
+                                            Mama, I'm chasing a ghost, I don't know who he is<br>
+                                            Mama, I'm chasing a ghost, I don't know where he is<br>
+                                            Mama, I'm chasing a ghost, do I look like him?<br><br>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="musicPage.html#Push2Start">
+                                    <img src="Images/push2start.jpg" alt="Push 2 Start" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Push 2 Start</h5>
+                                        <p class="card-text">
+                                            Ayy, yeah-yeah-yeah-yeah-yeah, yeah-yeah-yeah<br>
+                                            Oh<br><br>
+                                            The way we move, uh, skin on to skin<br>
+                                            No separation, need no competition, nah, nah, nah<br>
+                                            Ah, on everything<br>
+                                            It's automatic, goin' zero to a hund', nah, nah<br>
+                                            Ride it wishin' the wheels will fall off<br>
+                                            Time is tickin', it's takin' you too long<br>
+                                            Right before I decide to go home<br><br>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="musicPage.html#Taste">
+                                    <img src="Images/taste.jpg" alt="Taste" class="card-img-top" >
+                                    <div class="card-body">
+                                        <h5 class="card-title">Taste</h5>
+                                        <p class="card-text">
+                                            Oh, I leave quite an impression<br>
+                                            Five feet to be exact<br>
+                                            You're wonderin' why half his clothes went missin'<br>
+                                            My body's where they're at<br>
+                                            Now I'm gone, but you're still layin'<br>
+                                            Next to me, one degree of separation<br>
+                                            I heard you're back together and if that's true<br>
+                                            You'll just have to taste me when he's kissin' you<br>
+                                            If you want forever, I bet you do<br>
+                                            Just know you'll taste me too<br>
+                                            Uh-huh<br><br>
+                                        </p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-content m-0">
+                    <div class="feature-header" id="nnu">
+                        <a href="musicPage.html" style="color: black"><h3>News & Updates</h3></a>
+
+                        
+                        <hr>
+                    </div>
+                   <div class="container">
+                        <div class="row g-2">
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="NewsandUpdates.html#GTAVI">
+                                    <img src="https://tech4gamers.com/wp-content/uploads/2023/12/GTA-6-RT.jpg" alt="sada" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Grand Theft Auto VI</h5>
+                                        <p class="card-text">GTA 6 is officially set for release in 2025! Set in Vice City, it promises an expansive open-world experience, a gripping storyline, and groundbreaking features that push the boundaries of the franchise.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="NewsandUpdates.html#NewCartiAlbumDrop">
+                                    <img src="https://townsquare.media/site/812/files/2023/12/attachment-Playboi-Carti-Lollipop.jpg?w=980&q=75" alt="sada" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">New Carti Album Drop!</h5>
+                                        <p class="card-text">Playboi Carti's highly anticipated album, I Am Music, is scheduled for release today, March 14, 2025. This marks his first album since 2020's Whole Lotta Red. The project has experienced several delays and title changes, initially announced as Narcissist in 2021 before adopting its current name.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-6 col-lg-4">
+                                <a href="NewsandUpdates.html#GameDropDelayed">
+                                    <img src="https://www.techspot.com/images2/news/bigimage/2024/05/2024-05-15-image-20.jpg" alt="sada" class="card-img-top">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Game Drop Delayed!</h5>
+                                        <p class="card-text">Assassin's Creed Shadows, initially scheduled for release on November 15, 2024, has experienced two delays. The first postponement moved the launch to February 14, 2025, allowing Ubisoft additional time for polishing, especially after insights from the Star Wars Outlaws launch. Subsequently, the release was further delayed to March 20, 2025, to incorporate player feedback and enhance the overall gaming experience. Ubisoft Faces Financial Challenges Amid Assassin's Creed Shadows Delays.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!--Featured Content End-->
+        </div> <!--Featured End-->
+        </div>
+    </section>
+
+    <!-- JOIN US -->
+    <section class="section-beige container-fluid" style="margin-bottom: -15px;">
+        <div class="row" id="joinus">
+            <div class="col-md-2" style="max-height: fit-content;">
+                <div class="discord">
+                    <a href="https://discord.gg/fvpFqnTxJz" target="_blank" class="discord-link">
+                        <img src="Images/Discord-Logo.png" alt="Discord Logo">
+                        <h6>Join the BUZZ with UZZ, GenZ Lens</h6>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-10 form-input">
+                <h2>Subscribe to our Newsletter</h2>
+                <form id="subscribeForm">
+                    <input type="text" id="name" class="form-control mb-2" placeholder="Your Name" required>
+                    <input type="email" id="email" class="form-control mb-2" placeholder="Your Email" required>
+
+                    <!-- Button triggers modal after validation -->
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="tyModal" tabindex="-1" aria-labelledby="tyModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="tyModalLabel">Thank You!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Thank you for subscribing to our newsletter! 🎉
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <section class="footer-section">
+        <footer class="footer-content">
+            <img src="Images/Logo-Icons/GenZ%20Lens%20Logo-whitebg.png" alt="GenZ Lens"><br>
+            <p>&copy; 2025 GENZ LENS</p>
+            <ul>
+                <li><a href="contactPage.html">Contact Us</a></li>
+                <li><a href="sitemap.html">Sitemap</a></li> 
+            </ul>
+               <b>Developer: </b>Andrea Leziel H. Pajarillo
+        </footer>
+    </section>
+    
+    <script>
+        document.getElementById("subscribeForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            let name = document.getElementById("name").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+            if (name && email) {
+                let modal = new bootstrap.Modal(document.getElementById('tyModal'));
+                modal.show();
+                this.reset(); // Reset form after showing modal
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="navScript.js"></script>
+</body>
+</html>
